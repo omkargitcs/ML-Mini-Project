@@ -39,3 +39,36 @@ Ensure you have Python 3.8+ installed along with the following core dependencies
 
 ```bash
 pip install torch torchvision numpy scipy matplotlib scikit-learn
+🚀 Getting Started
+1. Data Preprocessing
+Run the data pipeline to prepare images and generate pair batches:
+
+Bash
+python data_pipeline.py
+```[cite: 11]
+
+### 2. Feature Extraction via Transfer Learning
+Generate compressed feature embeddings using ResNet50 or VGG16:
+```bash
+python "resnet50_features 1.py"
+```[cite: 11]
+
+### 3. Train Siamese Network
+Train the custom Siamese CNN model to compute similarity scores:
+```bash
+python custom_siamese_cnn.py
+```[cite: 11]
+
+### 4. Train Autoencoder & Evaluate
+Train the autoencoder for unsupervised latent feature extraction and run performance evaluation:
+```bash
+python autoencoder_and_eval.py
+```[cite: 11]
+
+---
+
+## 📊 Pre-extracted Embeddings & Weights
+
+* **`best_siamese_model.pt`**: PyTorch checkpoint containing the optimal weights for the Siamese CNN model[cite: 11].
+* **`*.npz` files**: Saved NumPy archives storing extracted high-dimensional feature vectors (`autoencoder_embeddings.npz`, `resnet50_embeddings.npz`, `vgg16_embeddings.npz`) for downstream tasks like clustering or similarity search[cite: 11].
+* **`MLProjectOutput.txt`**: Detailed metric output and model evaluations[cite: 11].
