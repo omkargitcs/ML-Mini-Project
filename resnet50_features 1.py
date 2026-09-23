@@ -1,19 +1,4 @@
-"""
-FILE 3: resnet50_features.py (Farhan's Component)
-================================================================================
-CLASSICAL ML ANALOGY:
-Deep feedforward networks suffer from vanishing gradients. ResNet introduces
-"Residual Skip Connections" ($y = F(x) + x$). In scikit-learn terminology,
-this acts like an additive ensemble (similar to Gradient Boosting): instead of
-forcing layers to learn the entire representation from scratch, each block learns
-an incremental residual correction on top of the identity mapping.
 
-This module:
-1. Loads a 50-layer ResNet pre-trained on ImageNet.
-2. Replaces the terminal 1000-class linear projection with `nn.Identity()`.
-3. Emits a dense 2,048-dimensional feature embedding for every face image.
-================================================================================
-"""
 
 import gc
 import os
