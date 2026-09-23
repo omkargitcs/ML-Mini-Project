@@ -1,22 +1,3 @@
-"""
-FILE 2: vgg16_features.py (Omkar's Component)
-================================================================================
-CLASSICAL ML ANALOGY:
-In traditional machine learning, you would handcraft features using algorithms
-like SIFT, HOG, or PCA to turn a 2D image into a 1D numerical row vector.
-
-VGG16 acts as an automated, non-linear feature extractor:
-1. It passes the raw image through 13 convolutional layers to detect edges,
-   corners, textures, and facial geometries.
-2. The final 1,000-class classification head (trained for ImageNet object classes)
-   is discarded.
-3. We extract outputs from the terminal hidden layer (`classifier[4]`), yielding a
-   dense numerical vector of length 4,096.
-
-This produces a transformed design matrix X of shape (n_samples, 4096) for downstream
-cosine distance metrics, just like a standard scikit-learn feature matrix.
-================================================================================
-"""
 
 import gc
 import os
