@@ -1,25 +1,4 @@
-"""
-FILE 5: autoencoder_and_eval.py (Riya's Component & Final Evaluation Suite)
-================================================================================
-CLASSICAL ML ANALOGY:
-1. AUTOENCODER (Unsupervised Feature Extractor):
-   An Autoencoder is the non-linear deep learning counterpart of Principal Component
-   Analysis (PCA). An encoder compresses images into a 128-D bottleneck, and a
-   decoder reconstructs them under Mean Squared Error (MSE) loss. The bottleneck
-   serves as our low-dimensional feature representation.
 
-2. BENCHMARK SUITE:
-   Acts like an automated Model Selection and Assessment workflow:
-   - For feature extractors (VGG16, ResNet50, Autoencoder), it computes pairwise
-     Cosine Similarities:
-     
-         $$\cos(\theta) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\|_2 \|\mathbf{v}\|_2}$$
-         
-   - Uses the Validation Set to find the optimal decision threshold via ROC search.
-   - Evaluates all 4 pipelines on the unseen Test Set and reports:
-     Accuracy, Precision, Recall, F1-Score, and Confusion Matrix metrics.
-================================================================================
-"""
 
 import gc
 import os
