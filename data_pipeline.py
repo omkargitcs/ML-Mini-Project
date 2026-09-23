@@ -1,23 +1,4 @@
-"""
-FILE 1: data_pipeline.py
-================================================================================
-CLASSICAL ML ANALOGY:
-In scikit-learn, you normally construct an X matrix of shape (n_samples, n_features)
-and a target vector y of shape (n_samples,). 
 
-In Deep Computer Vision, raw pixel matrices are our unengineered features.
-This module:
-1. Ingests raw face arrays using `sklearn.datasets.fetch_lfw_people`.
-2. Enforces strict Identity Isolation using `GroupShuffleSplit`. This is identical
-   to GroupKFold in scikit-learn: it guarantees that no subject's identity present
-   in the training set leaks into the validation or test splits.
-3. Implements a Siamese Pair Generator:
-   - Positive / Duplicate pair (y = 1): Image A + Image A augmented with jitter/crop.
-   - Negative / Non-Duplicate pair (y = 0): Image A + Image B (from a different person).
-4. Packages everything into PyTorch DataLoaders (the deep learning equivalent of
-   a memory-efficient, mini-batch generator).
-================================================================================
-"""
 
 import numpy as np
 import torch
