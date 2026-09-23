@@ -1,17 +1,4 @@
-"""
-FILE 4: custom_siamese_cnn.py (Sushanth's Component)
-================================================================================
-CLASSICAL ML ANALOGY:
-Rather than taking fixed embeddings from an external model, a Siamese CNN learns
-the feature transformation pipeline directly from the training data:
-1. A small, customized CNN maps an image to a compact 128-dimensional embedding.
-2. Both Image_A and Image_B are passed through the EXACT same network (shared weights).
-3. We compute their absolute difference vector: |Embedding_A - Embedding_B|.
-4. A final dense classification layer maps this difference to a single probability
-   using the Sigmoid function—identical to training a scikit-learn `LogisticRegression`
-   model on top of engineered feature differences.
-================================================================================
-"""
+
 
 import gc
 import numpy as np
